@@ -1,5 +1,11 @@
 {
   "name": "usercrude",
+  "description": "Avaliação de conhecimentos VueJS/HTML/CSS",
+  "author": {
+    "name": "wesley",
+    "email": "wesley.waaraujo@gmail.com",
+    "url": "https://leydev.com.br"
+  },
   "version": "0.1.0",
   "private": true,
   "scripts": {
