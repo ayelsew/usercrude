@@ -49,11 +49,11 @@ export default {
     addUser() {
       const { dispatch } = this.$store;
       const cleanUp = () => {
-          dispatch("setModalTitle", "")
-          dispatch("setModalName", "");
-          dispatch("setModalEmail", "")
-          dispatch("setModalRole", "")
-      }
+        dispatch("setModalTitle", "");
+        dispatch("setModalName", "");
+        dispatch("setModalEmail", "");
+        dispatch("setModalRole", "");
+      };
       dispatch("setModalTitle", "ADICIONAR USUÁRIO");
       dispatch("setModalButton0", {
         func: () => {
@@ -81,23 +81,33 @@ export default {
       const user = this.users[i];
       const { dispatch } = this.$store;
       const { modal } = this.$store.state;
+      const cleanUp = () => {
+        dispatch("setModalTitle", "");
+        dispatch("setModalName", "");
+        dispatch("setModalEmail", "");
+        dispatch("setModalRole", "");
+      };
 
       dispatch("setModalTitle", `Editar usuário #${i + 1}`);
       dispatch("setModalName", user.name);
       dispatch("setModalEmail", user.email);
       dispatch("setModalRole", user.role);
 
-      let func0 = () => dispatch("closeModal"),
-        func1 = () => {
-          db.collection("users")
-            .doc(user.id)
-            .update({
-              name: modal.name,
-              email: modal.email,
-              role: modal.role
-            });
-          dispatch("closeModal");
-        };
+      let func0 = () => {
+        dispatch("closeModal");
+        cleanUp();
+      };
+      func1 = () => {
+        db.collection("users")
+          .doc(user.id)
+          .update({
+            name: modal.name,
+            email: modal.email,
+            role: modal.role
+          });
+        dispatch("closeModal");
+        cleanUp();
+      };
 
       dispatch("setModalButton0", {
         func: func0

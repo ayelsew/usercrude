@@ -150,4 +150,18 @@ label {
 .hide {
   display: none;
 }
+
+input {
+  box-sizing: content-box;
+  display: block;
+  float: none;
+  line-height: normal;
+  position: static;
+  z-index: auto;
+  padding: 8px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 3px;
+  border-color: #c3c3c3;
+}
 </style>
