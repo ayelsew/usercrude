@@ -1,5 +1,12 @@
 # usercrude
 
+## Configurando firebase/firestore
+Renomeie o arquivo db-exemple.js e configure as credências do firebase
+
+```
+mv src/db-exemple.js  src/db.js
+```
+
 ## Project setup
 ```
 npm install
