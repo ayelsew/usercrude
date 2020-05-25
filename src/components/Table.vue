@@ -96,7 +96,7 @@ export default {
       let func0 = () => {
         dispatch("closeModal");
         cleanUp();
-      };
+      },
       func1 = () => {
         db.collection("users")
           .doc(user.id)

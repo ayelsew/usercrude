@@ -7,9 +7,9 @@ export default new Vuex.Store({
   state: {
     modal: {
       title: "",
-      name: "User"+Date.now(),
-      email: "User@"+Date.now()+".com",
-      role: "unknown",
+      name: "",
+      email: "",
+      role: "",
       hide: true,
       button0: {
         func: function () { }

@@ -113,7 +113,7 @@ export default {
 
 .modal .btn-model {
   border: unset;
-  padding: 0.5rem 2.9rem;
+  padding: 0.5rem 2.6rem;
   cursor: pointer;
   font-weight: 900;
   color: #ffffff;
